@@ -1,5 +1,4 @@
 import React from 'react';
-import Interactive from 'react-interactive';
 import { Switch, Route, Link } from 'react-router-dom';
 import ExampleTwoDeepComponent from './ExampleTwoDeepComponent';
 import PageNotFound from './PageNotFound';
@@ -31,11 +30,12 @@ export default function ExampleComponent() {
           <div>
             <ExamplePageText />
             <div style={s.pageLinkContainer}>
-              <Interactive
-                as={Link}
+              <Link
                 {...s.link}
                 to="/example/two-deep?field1=foo&field2=bar#boom!"
-              >Example two deep with query and hash</Interactive>
+              >
+                Example two deep with query and hash
+              </Link>
             </div>
           </div>
         )}
